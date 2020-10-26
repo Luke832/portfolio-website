@@ -1,0 +1,198 @@
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+  --yellow: #edc655;
+  --light-yellow: #fcffad;
+  --orange: #f76414;
+  --green-blue: #05676e;
+  --green: #489c79;
+  --font-weight: 700;
+  --padding: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  /* Sets the font size to 16 */
+  line-height: 1.6;
+  }
+a {
+  color: var(--primary-color);
+}
+a:hover, a:focus {
+  /* No underlining when hovering over a link */ text-decoration: none;
+}
+a:visited {
+  /* visited link */
+  color: var(--green-blue);
+}
+a:active {
+  /* selected link */
+  color: var(--green);
+}
+.button, button {
+  /* overwrites browser defaults */
+  /* resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles button */
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+}
+button:hover,
+button:focus,
+.button:hover,
+,button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+.button_secondary {
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
+}
+h1 {
+  font-size: 30px;
+  font-weight: var(--font-weight);
+}
+h2 {
+  font-size: 24px;
+  font-weight: var(--font-weight);
+}
+h3 {
+  font-size: 18px;
+  font-weight: var(font-weight);
+}
+.profile__portrait {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.page-footer {
+  clear: both;
+}
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: var(--padding);
+}
+.page-header__item {
+  flex: 0 1 200px;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.grid_item {
+  background-color: lightgray;
+  min-height: auto;
+  padding: var(--padding);
+}
+.grid_item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+.social-media a {
+  text-decoration: none;
+}
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid_item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@keyframes color-change {
+  0% {
+    fill: var(--yellow);
+  }
+  50% {
+    fill: var(--light-yellow);
+  }
+  100% {
+    fill: var(--orange);
+  }
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+/*
+Colors used
+Text Color (Dark Grey): #2b2b2b;
+Primary Color (Blue): #1975d1;
+Secondary Color (Green): #30f8a1
+*/
