@@ -53,8 +53,8 @@ a:active {
 }
 button:hover,
 button:focus,
-.button:hover,
-,button:focus {
+button:hover,
+button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
@@ -74,7 +74,7 @@ h2 {
 }
 h3 {
   font-size: 18px;
-  font-weight: var(font-weight);
+  font-weight: var(--font-weight);
 }
 .profile__portrait {
   float: left;
